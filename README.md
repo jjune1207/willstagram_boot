@@ -1,2 +1,2 @@
 # willstagram_boot
-willstagram boot로 싱행해보기 (maven)
+willstagram boot로 행해보기 (maven)
