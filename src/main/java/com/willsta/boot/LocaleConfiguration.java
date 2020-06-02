@@ -18,7 +18,7 @@ public class LocaleConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.setBasename("/messages");
+        messageSource.setBasename("/messages/messages");
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
     }
@@ -26,13 +26,14 @@ public class LocaleConfiguration extends WebMvcConfigurerAdapter {
     @Bean
     public LocaleResolver localeResolver() {
        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
+       sessionLocaleResolver.setDefaultLocale(Locale.KOREA);
        return sessionLocaleResolver;
     }
 
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-       localeChangeInterceptor.setParamName("messages");
+       localeChangeInterceptor.setParamName("lang");
        return localeChangeInterceptor;
     }
 
