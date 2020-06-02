@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ServletConfig implements  WebMvcConfigurer, WebMvcRegistrations {
 	
     public void addViewControllers(ViewControllerRegistry viewControllerRegistry) {
-    	viewControllerRegistry.addViewController("/").setViewName("forward:index.jsp");
+    	viewControllerRegistry.addViewController("/").setViewName("index");
     	//viewControllerRegistry.addRedirectViewController("/", "/index.jsp");
     }
 }
